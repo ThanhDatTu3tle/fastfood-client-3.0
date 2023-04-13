@@ -13,6 +13,7 @@ import { CategoryService } from "../../pages/home/data-access/category/category.
 export class ProductComponent implements OnInit{
   // @Input() category: Category[] | undefined;
   // @Input() product!: any;
+  contentBtn: string = "Add to cart";
 
   category!: Category;
   products!: Product[];

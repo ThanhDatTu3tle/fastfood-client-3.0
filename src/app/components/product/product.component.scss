@@ -1,16 +1,19 @@
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .inner {
+  flex: 1 25%;
+  max-width: 23%;
+  margin-bottom: 26px;
   display: block;
   border-radius: 10px;
-  padding: 12px 12px;
-  margin: 15px;
-  width: 22%;
+  padding: 15px 15px;
+  margin: 10px;
   height: 100%;
+  position: relative;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgb(0 0 0 / 15%);
 }
@@ -30,8 +33,10 @@
 }
 
 .product-price {
+  text-align: center;
   line-height: 100%;
-  margin-bottom: 10px;
+  margin-top: 22px;
+  margin-bottom: 8px;
   font-size: 25px;
   font-weight: 700;
   color: #ff5b6a;

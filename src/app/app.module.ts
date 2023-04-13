@@ -21,6 +21,7 @@ import { ProductComponent } from './components/product/product.component';
 
 import {CategoryService} from "./pages/home/data-access/category/category.service";
 import {ProductService} from "./pages/home/data-access/product/product.service";
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {ProductService} from "./pages/home/data-access/product/product.service";
     PromotionComponent,
     MenuHighlightsComponent,
     TitleComponent,
-    ProductComponent
+    ProductComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

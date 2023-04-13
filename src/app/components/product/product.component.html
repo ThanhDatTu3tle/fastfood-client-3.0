@@ -11,9 +11,9 @@
     </div>
 
     <div class="product-price">
-      {{item.price | currency:'VNĐ':true:'4.0'}}
+      {{item.price | currency:'đ':false:'1.0'}}
     </div>
 
-    <button>CUM</button>
+    <app-button [content]="contentBtn"></app-button>
   </div>
 </div>
