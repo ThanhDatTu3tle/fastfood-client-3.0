@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.inner {
+  display: block;
+  border-radius: 10px;
+  padding: 12px 12px;
+  margin: 15px;
+  width: 22%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 15%);
+}
+
+.descriptions {
+  display: flex;
+  flex-direction: column;
+  opacity: .7;
+  margin: 20px 0px;
+  font-size: 14px;
+  height: 40px;
+  overflow-y: hidden;
+
+  .description {
+    display: inline;
+  }
+}
+
+.product-price {
+  line-height: 100%;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #ff5b6a;
+}
