@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
-import { Observable } from "rxjs";
+import {Observable} from "rxjs";
 
-import { Category } from "../../../../../models/category.model";
+import { Category } from '../../../../models/category.model';
 
 const apiUrl = 'https://odd-jade-adder-vest.cyclic.app/category/63d133ab7abbc1799c72eeb4';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryService {
+export class ProductService {
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
-  getAllCategory(): Observable<Category> {
+  getAllProductPromotion(): Observable<Category> {
     return this.httpClient.get<Category>(apiUrl);
   }
 }

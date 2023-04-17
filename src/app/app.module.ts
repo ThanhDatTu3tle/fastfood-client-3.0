@@ -28,6 +28,10 @@ import { OrderNowComponent } from './pages/home/menu-highlights/items/order-now/
 import { BirthdayComponent } from './pages/home/menu-highlights/items/birthday/birthday.component';
 import { StoreComponent } from './pages/home/menu-highlights/items/store/store.component';
 import { HighlightsComponent } from './pages/home/menu-highlights/items/highlights/highlights.component';
+import { MenuListComponent } from './layouts/components/menu-list/menu-list.component';
+import { MenuItemComponent } from './layouts/components/menu-list/menu-item/menu-item.component';
+import {NgOptimizedImage} from "@angular/common";
+import { ChickenComponent } from './pages/chicken/chicken.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,10 @@ import { HighlightsComponent } from './pages/home/menu-highlights/items/highligh
     OrderNowComponent,
     BirthdayComponent,
     StoreComponent,
-    HighlightsComponent
+    HighlightsComponent,
+    MenuListComponent,
+    MenuItemComponent,
+    ChickenComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,8 @@ import { HighlightsComponent } from './pages/home/menu-highlights/items/highligh
     HttpClientModule,
 
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    NgOptimizedImage
   ],
   providers: [CategoryService, ProductService],
   bootstrap: [AppComponent]
