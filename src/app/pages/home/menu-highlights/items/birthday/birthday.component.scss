@@ -1,0 +1,34 @@
+.menu-item-birthday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 315px;
+  height: 80px;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #ff5b6a;
+  background-image: url(https://www.lotteria.vn/grs-static/images/icon-9.svg);
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+
+  &:hover {
+    color: white;
+  }
+
+  &:hover .hover-birthday {
+    background-color: #ff5b6a;
+  }
+
+  .hover-birthday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.lotteria.vn/grs-static/images/icon-9.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+  }
+}

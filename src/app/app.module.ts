@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { HeaderComponent } from './layouts/components/header/header.component';
 import { FooterComponent } from './layouts/components/footer/footer.component';
@@ -19,9 +20,14 @@ import { MenuHighlightsComponent } from './pages/home/menu-highlights/menu-highl
 import { TitleComponent } from './components/title/title.component';
 import { ProductComponent } from './components/product/product.component';
 
-import {CategoryService} from "./pages/home/data-access/category/category.service";
-import {ProductService} from "./pages/home/data-access/product/product.service";
+import { CategoryService } from "./pages/home/data-access/category/category.service";
+import { ProductService } from "./pages/home/data-access/product/product.service";
 import { ButtonComponent } from './components/button/button.component';
+import { BestSellerComponent } from './pages/home/menu-highlights/items/best-seller/best-seller.component';
+import { OrderNowComponent } from './pages/home/menu-highlights/items/order-now/order-now.component';
+import { BirthdayComponent } from './pages/home/menu-highlights/items/birthday/birthday.component';
+import { StoreComponent } from './pages/home/menu-highlights/items/store/store.component';
+import { HighlightsComponent } from './pages/home/menu-highlights/items/highlights/highlights.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,12 @@ import { ButtonComponent } from './components/button/button.component';
     MenuHighlightsComponent,
     TitleComponent,
     ProductComponent,
-    ButtonComponent
+    ButtonComponent,
+    BestSellerComponent,
+    OrderNowComponent,
+    BirthdayComponent,
+    StoreComponent,
+    HighlightsComponent
   ],
   imports: [
     BrowserModule,
