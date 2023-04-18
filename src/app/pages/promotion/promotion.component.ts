@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { ProductService } from "./data-access/product.service";
-import { Category } from "../../../models/category.model";
-import { Product } from "../../../models/product.model";
+import {ProductService} from "./data-access/product.service";
+import {Category} from "../../../models/category.model";
+import {Product} from "../../../models/product.model";
 
 @Component({
   selector: 'app-promotion',
@@ -22,9 +22,8 @@ export class PromotionComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getAllProductPromotion().subscribe((product: Category): void => {
       this.product = product;
-      const products = product.products;
       // console.log(products)
-      this.products = products;
+      this.products = product.products;
     });
   }
 }

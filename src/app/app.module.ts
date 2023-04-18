@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgOptimizedImage } from "@angular/common";
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,7 +16,6 @@ import { FooterComponent } from './layouts/components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuTitlesComponent } from './layouts/components/header/menu-titles/menu-titles.component';
 import { OptionsComponent } from './layouts/components/header/options/options.component';
-import { PromotionComponent } from './pages/promotion/promotion.component';
 import { MenuHighlightsComponent } from './pages/home/menu-highlights/menu-highlights.component';
 import { TitleComponent } from './components/title/title.component';
 import { ProductComponent } from './components/product/product.component';
@@ -28,10 +28,10 @@ import { OrderNowComponent } from './pages/home/menu-highlights/items/order-now/
 import { BirthdayComponent } from './pages/home/menu-highlights/items/birthday/birthday.component';
 import { StoreComponent } from './pages/home/menu-highlights/items/store/store.component';
 import { HighlightsComponent } from './pages/home/menu-highlights/items/highlights/highlights.component';
-import { MenuListComponent } from './layouts/components/menu-list/menu-list.component';
 import { MenuItemComponent } from './layouts/components/menu-list/menu-item/menu-item.component';
-import {NgOptimizedImage} from "@angular/common";
-import { ChickenComponent } from './pages/chicken/chicken.component';
+import {RouterModule} from "@angular/router";
+import {SharedModule} from "./shared.module";
+// import {MenuListComponent} from "./layouts/components/menu-list/menu-list.component";
 
 @NgModule({
   declarations: [
@@ -42,31 +42,36 @@ import { ChickenComponent } from './pages/chicken/chicken.component';
     HomeComponent,
     MenuTitlesComponent,
     OptionsComponent,
-    PromotionComponent,
     MenuHighlightsComponent,
-    TitleComponent,
-    ProductComponent,
-    ButtonComponent,
+    // MenuListComponent,
+    // TitleComponent,
+    // ProductComponent,
+    // ButtonComponent,
     BestSellerComponent,
     OrderNowComponent,
     BirthdayComponent,
     StoreComponent,
     HighlightsComponent,
-    MenuListComponent,
-    MenuItemComponent,
-    ChickenComponent
+    // MenuItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forChild([]),
     BrowserAnimationsModule,
     HttpClientModule,
 
     MatButtonModule,
     MatIconModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    SharedModule,
+    // SharedModule,
+
   ],
   providers: [CategoryService, ProductService],
+  exports: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
