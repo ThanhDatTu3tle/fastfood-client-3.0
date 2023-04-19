@@ -4,15 +4,15 @@
     align-items: flex-start;
     font-size: 1.6rem;
     font-weight: 700;
-    width: 100%;
+    width: 290px;
     height: 66px;
-    padding: 10px 22px;
+    padding: 10px 20px;
     border-radius: 2px;
     cursor: pointer;
     border: 1px solid transparent;
     background-color: white;
     user-select: none;
-  
+
     &.disable {
       pointer-events: none;
       opacity: 0.5;
@@ -25,22 +25,9 @@
     background-color: #ff5b6a;
     color: white;
     border-radius: 5px;
-  
+
     &:hover {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
         #ff5b6a;
-    }
-  }
-  
-  .close {
-    background-color: transparent;
-  }
-  
-  .outline {
-    border-color: #ff5b6a;
-    color: #ff5b6a;
-  
-    &:hover {
-      background-color: rgba(254, 44, 85, 0.06);
     }
   }

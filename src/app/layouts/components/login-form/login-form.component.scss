@@ -1,0 +1,130 @@
+h2, h3 {
+  font-weight: 600;
+}
+
+button {
+  display: block;
+  border: 0;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  border-radius: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #142f43;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: 400px;
+  background-color: #fffcfe;
+}
+
+div::-webkit-scrollbar {
+  display: none; /* cho Chrome, Safari, and Opera */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 400px;
+}
+
+.image {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  height: 400px;
+  z-index: 1;
+}
+
+.input {
+  width: 247px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ff5b6a;
+}
+
+.btn-continue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: -14px;
+}
+
+.btn {
+  width: 280px;
+}
+
+.checkout {
+  margin-left: 60px;
+  color: #ff5b6a;
+}
+
+.login-others {
+  padding-bottom: -150px;
+}
+
+.login-others .text:before {
+  content: "";
+  width: 40%;
+  height: 1px;
+  background-color: rgba(179,179,179,0.5);
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+  right: 20px;
+  top: 72%;
+}
+
+.login-others .text span {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-left: 55px;
+  background-color: #fff;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.others-method {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 247px;
+}
+
+.fb {
+  background-image: url('https://www.lotteria.vn/grs-static/images/icon-fb.svg');
+  background-position: 50% 7px;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}
+
+.gg {
+  background-image: url('https://www.lotteria.vn/grs-static/images/icon-google.svg');
+  background-position: 50% 7px;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}
+
+.ap {
+  background-image: url('https://www.lotteria.vn/grs-static/images/icon-apple.svg');
+  background-position: 50% 7px;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}

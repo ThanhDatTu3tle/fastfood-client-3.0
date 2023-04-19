@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="form">
+    <form [formGroup]="signInForm" class="sign-in-form">
+      <h2>Đăng nhập hặc tạo tài khoản</h2>
+      <h3>Phone number/Email</h3>
+      <div>
+        <input class="input" placeholder="Enter your phone number/Email" formControlName="email" />
+
+        <div >
+          <span>{{ signInForm.get("email")?.errors }}</span>
+        </div>
+      </div>
+
+      <div class="btn-continue">
+        <app-button class="btn" [content]="contentBtn"></app-button>
+      </div>
+
+      <h3 class="checkout">Checkout as guest</h3>
+
+      <div class="login-others">
+        <p class="text">
+          <span>hoặc Đăng nhập bằng</span>
+        </p>
+      </div>
+
+      <div class="others-method">
+        <button class="fb">
+          <span>FACEBOOK</span>
+        </button>
+
+        <button class="gg">
+          <span>GOOGLE</span>
+        </button>
+
+        <button class="ap">
+          <span>APPLE</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="image">
+    <img src="https://www.lotteria.vn/grs-static/images/login-banner.jpg"/>
+  </div>
+</div>

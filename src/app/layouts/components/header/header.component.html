@@ -14,10 +14,16 @@
     </div>
 
     <!--  Options-->
-    <div class="flex flex-row items-center justify-between w-3/12">
+    <div class="flex flex-row items-center justify-between w-3/12" *ngIf="user != null; else noUser">
       <div class="w-full">
         <app-options></app-options>
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #noUser>
+    <mat-dialog-actions class="login">
+      <app-button class="btn-login" [content]="contentBtn" (click)="openDialog('600ms', '500ms')"></app-button>
+    </mat-dialog-actions>
+</ng-template>

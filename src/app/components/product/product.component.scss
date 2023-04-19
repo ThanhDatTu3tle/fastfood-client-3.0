@@ -14,7 +14,7 @@
   margin: 10px;
   height: 100%;
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
   box-shadow: 1px 1px 5px rgb(0 0 0 / 15%);
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   opacity: .7;
-  margin: 20px 0px;
+  margin: 20px 0;
   font-size: 14px;
   height: 40px;
   overflow-y: hidden;
@@ -36,9 +36,14 @@
   text-align: right;
   line-height: 100%;
   margin-top: 22px;
-  margin-right: 22px;
+  margin-right: 8px;
   margin-bottom: 8px;
   font-size: 25px;
   font-weight: 700;
   color: #ff5b6a;
+}
+
+.btn-add {
+  display: flex;
+  justify-content: center;
 }
