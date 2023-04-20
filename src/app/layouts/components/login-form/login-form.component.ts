@@ -11,6 +11,7 @@ import {
 import {NoWhitespaceValidator} from "../../../validators/no-whitespace.validator";
 
 import { Observable, of } from "rxjs";
+import {GoogleApiService} from "../../../google-api.service";
 
 @Component({
   selector: 'app-login-form',
@@ -18,33 +19,37 @@ import { Observable, of } from "rxjs";
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
-  signInForm!: FormGroup
+
   contentBtn: string = 'Continue';
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private readonly google: GoogleApiService
   ) {
   }
 
-  ngOnInit() {
-    this.signInForm = this.fb.group({
-      email: [
-        "",
-        Validators.compose([
-          // NoWhitespaceValidator(),
-          Validators.minLength(6),
-          Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/g)
-        ])
-      ]
-    })
+  signInForm = this.fb.group({
+    "email": [
+      "",
+      Validators.compose([
+        Validators.required,
+        Validators.minLength(6),
+        Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/)
+      ])
+    ]
+  })
 
-    new FormControl("", Validators.required, this.isUserNameDuplicated);
+  ngOnInit() {
+
+  }
+  get form() {
+    return this.signInForm.controls;
   }
 
   onSubmit() {
 
   }
 
-  isUserNameDuplicated(control: AbstractControl): Observable<null> {
-    return of(null);
+  handleSignInGoogle() {
+    this.google.signIn()
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
 import { LoginFormComponent } from "../login-form/login-form.component";
+import {GoogleApiService} from "../../../google-api.service";
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,11 @@ export class HeaderComponent implements OnInit {
 
   user: string | null = localStorage.getItem('user');
 
-  contentBtn: string = "LOGIN";
+  contentBtnLogin: string = "LOGIN";
+  contentBtnLogout: string = "LOGOUT";
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private readonly google: GoogleApiService
   ) {
   }
 
@@ -28,6 +31,10 @@ export class HeaderComponent implements OnInit {
       enterAnimationDuration,
       exitAnimationDuration,
     });
+  }
+
+  logout() {
+    return this.google.signOut()
   }
 }
 

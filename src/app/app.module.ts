@@ -8,6 +8,9 @@ import { FormsModule } from "@angular/forms";
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatDialogModule} from "@angular/material/dialog";
+
+import {OAuthModule, OAuthStorage } from "angular-oauth2-oidc";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +31,7 @@ import { StoreComponent } from './pages/home/menu-highlights/items/store/store.c
 import { HighlightsComponent } from './pages/home/menu-highlights/items/highlights/highlights.component';
 
 import {SharedModule} from "./shared.module";
-import {MatDialogModule} from "@angular/material/dialog";
+
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     RouterModule.forChild([]),
     BrowserAnimationsModule,
     HttpClientModule,
+    OAuthModule.forRoot(),
     MatButtonModule,
     MatIconModule,
     NgOptimizedImage,
@@ -59,7 +63,10 @@ import {MatDialogModule} from "@angular/material/dialog";
     FormsModule,
     MatDialogModule
   ],
-  providers: [CategoryService, ProductService],
+  providers: [
+    CategoryService,
+    ProductService,
+  ],
   exports: [
 
   ],

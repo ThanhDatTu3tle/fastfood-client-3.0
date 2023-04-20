@@ -1,13 +1,17 @@
 <div class="wrapper">
   <div class="form">
-    <form [formGroup]="signInForm" class="sign-in-form">
-      <h2>Đăng nhập hặc tạo tài khoản</h2>
+    <form [formGroup]="signInForm" class="sign-in-form" (ngSubmit)="onSubmit()">
+      <h2>Đăng nhập hoặc tạo tài khoản</h2>
       <h3>Phone number/Email</h3>
       <div>
         <input class="input" placeholder="Enter your phone number/Email" formControlName="email" />
-
-        <div >
-          <span>{{ signInForm.get("email")?.errors }}</span>
+        <div *ngIf="form.email.invalid && (form.email.dirty || form.email.touched)">
+          <div *ngIf="form.email.errors?.['required']">
+            <span class="text-red-600">Email is required.</span>
+          </div>
+          <div *ngIf="form.email.errors?.['pattern']">
+            <span class="text-red-600">Email is invalid.</span>
+          </div>
         </div>
       </div>
 
@@ -28,7 +32,7 @@
           <span>FACEBOOK</span>
         </button>
 
-        <button class="gg">
+        <button class="gg" (click)="handleSignInGoogle()">
           <span>GOOGLE</span>
         </button>
 
