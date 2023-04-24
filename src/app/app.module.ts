@@ -18,9 +18,10 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { HeaderComponent } from './layouts/components/header/header.component';
 import { FooterComponent } from './layouts/components/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
 import { MenuTitlesComponent } from './layouts/components/header/menu-titles/menu-titles.component';
 import { OptionsComponent } from './layouts/components/header/options/options.component';
+
+import { HomeComponent } from './pages/home/home.component';
 import { MenuHighlightsComponent } from './pages/home/menu-highlights/menu-highlights.component';
 import { CategoryService } from "./pages/home/data-access/category/category.service";
 import { ProductService } from "./pages/home/data-access/product/product.service";

@@ -3,9 +3,43 @@
     <mat-icon>room</mat-icon>
   </button>
 
-  <button mat-fab color="white" aria-label="Example icon button with a heart icon">
-    <mat-icon>face</mat-icon>
-  </button>
+  <div>
+    <button #bt id="button" aria-describedby="tooltip" (click)="show()" mat-fab color="white" aria-label="Example icon button with a heart icon">
+      <mat-icon>face</mat-icon>
+    </button>
+
+    <div id="tooltip" #tooltip role="tooltip" class="bg-white shadow-md">
+      <div class="btn-tooltip">
+        <img class="mr-4" src="https://www.lotteria.vn/grs-static/images/icon-account-2.svg"/>
+        <button (click)="test()">Account information</button>
+      </div>
+
+      <div class="btn-tooltip">
+        <img class="mr-4" src="https://www.lotteria.vn/grs-static/images/icon-pos.svg"/>
+        <button (click)="test()">Shipping Address</button>
+      </div>
+
+      <div class="btn-tooltip">
+        <img class="mr-4" src="https://www.lotteria.vn/grs-static/images/icon-history.svg"/>
+        <button (click)="test()">Order history</button>
+      </div>
+
+      <div class="btn-tooltip">
+        <img class="mr-4" src="https://www.lotteria.vn/grs-static/images/icon-save-2.svg"/>
+        <button (click)="test()">My menu / wishlist</button>
+      </div>
+
+      <div class="btn-tooltip">
+        <img class="mr-4" src="https://www.lotteria.vn/grs-static/images/icon-help.svg"/>
+        <button (click)="test()">Support</button>
+      </div>
+
+      <div class="btn-tooltip">
+        <img class="mr-4" src="https://www.lotteria.vn/grs-static/images/icon-logout.svg"/>
+        <button (click)="logout()">Sign out</button>
+      </div>
+    </div>
+  </div>
 
   <button mat-fab color="white" aria-label="Example icon button with a heart icon">
     <mat-icon>notifications_active</mat-icon>

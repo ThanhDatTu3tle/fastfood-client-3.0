@@ -48,6 +48,12 @@ export class GoogleApiService implements OnInit {
       this.oAuthService.tryLoginImplicitFlow().then(() => {
         if (!this.oAuthService.hasValidAccessToken()) {
           this.oAuthService.initLoginFlow()
+          this.oAuthService.loadUserProfile().then((userProfile) => {
+            const userName = Object.entries(userProfile)[0][1].name
+            console.log(userName)
+            localStorage.setItem('user', userName)
+            window.location.reload()
+          })
         } else {
           this.oAuthService.loadUserProfile().then((userProfile) => {
             const userName = Object.entries(userProfile)[0][1].name
