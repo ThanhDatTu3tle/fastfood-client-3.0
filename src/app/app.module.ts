@@ -8,9 +8,9 @@ import { FormsModule } from "@angular/forms";
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatDialogModule} from "@angular/material/dialog";
+import { MatDialogModule } from "@angular/material/dialog";
 
-import {OAuthModule, OAuthStorage } from "angular-oauth2-oidc";
+import { OAuthModule } from "angular-oauth2-oidc";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,8 +30,9 @@ import { OrderNowComponent } from './pages/home/menu-highlights/items/order-now/
 import { BirthdayComponent } from './pages/home/menu-highlights/items/birthday/birthday.component';
 import { StoreComponent } from './pages/home/menu-highlights/items/store/store.component';
 import { HighlightsComponent } from './pages/home/menu-highlights/items/highlights/highlights.component';
+import { DetailComponent } from "./pages/detail/detail.component";
 
-import {SharedModule} from "./shared.module";
+import { SharedModule } from "./shared.module";
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import {SharedModule} from "./shared.module";
     BirthdayComponent,
     StoreComponent,
     HighlightsComponent,
+    // DetailComponent
   ],
   imports: [
     BrowserModule,

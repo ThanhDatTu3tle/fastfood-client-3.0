@@ -5,8 +5,8 @@ import { Observable } from "rxjs";
 
 import { Category } from "../../../../../models/category.model";
 
-const apiUrl = 'https://odd-jade-adder-vest.cyclic.app/category/63d133ab7abbc1799c72eeb4';
-
+const apiUrlDessert = 'https://odd-jade-adder-vest.cyclic.app/category/63d8967c9c55b5009153c275';
+const apiUrlSauceChicken = 'https://odd-jade-adder-vest.cyclic.app/category/64478993506aaeab28e7b628';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +16,11 @@ export class CategoryService {
     private httpClient: HttpClient
   ) { }
 
-  getAllCategory(): Observable<Category> {
-    return this.httpClient.get<Category>(apiUrl);
+  getAllProductOfSauceChicken(): Observable<Category> {
+    return this.httpClient.get<Category>(apiUrlSauceChicken)
+  }
+
+  getAllProductOfDessert(): Observable<Category> {
+    return this.httpClient.get<Category>(apiUrlDessert)
   }
 }

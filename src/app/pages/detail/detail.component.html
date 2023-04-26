@@ -1,0 +1,37 @@
+<div class="flex flex-col items-center justify-center mt-20">
+  <div class="flex flex-row items-start justify-between w-1/2 h-fit">
+    <!--    Contents-->
+    <div class="flex w-2/5">
+      <img [src]="product.image"/>
+    </div>
+
+    <div class="flex flex-col items-start justify-between w-3/5 h-full">
+      <p class="name">{{product.name}}</p>
+      <br />
+      <p class="price">{{product.price | currency:'đ':false:'1.0'}}</p>
+
+      <div class="descriptions">
+        <div *ngFor="let itemDescription of product.description">
+          {{itemDescription}}
+        </div>
+      </div>
+
+      <div class="extra">
+        <app-extra-product [products]="productSauceChickens" [content]="titleSauceChicken"></app-extra-product>
+      </div>
+
+      <div class="extra">
+        <app-extra-dessert-drink [productDesserts]="productDesserts" [content]="titleDessert"></app-extra-dessert-drink>
+      </div>
+
+      <div class="quantity">
+        <h2 style="margin-top: 10px;">Quantity</h2>
+        <button class="minus">-</button>
+        <div class="counter">0</div>
+        <button class="plus">+</button>
+      </div>
+
+      <app-button [content]="contentBtn"></app-button>
+    </div>
+  </div>
+</div>

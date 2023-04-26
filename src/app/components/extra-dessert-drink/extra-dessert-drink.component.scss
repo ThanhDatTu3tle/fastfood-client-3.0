@@ -1,0 +1,109 @@
+img {
+  width: 80px;
+  height: 60px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #c4c4c4;
+  justify-content: space-between;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.btn-cancel {
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.lotteria.vn/grs-static/images/icon-remove.svg");
+  border: none;
+  float: left;
+  padding: 0;
+  margin: 0 0 15px 5px;
+}
+
+.choose-number {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.minus {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF969A;
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.counter {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  background-color: #FFEAE3;
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF969A;
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+}

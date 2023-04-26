@@ -15,6 +15,8 @@ import {PopperComponent} from "./components/popper/popper.component";
 import {MenuListComponent} from "./layouts/components/menu-list/menu-list.component";
 import {MenuItemComponent} from "./layouts/components/menu-list/menu-item/menu-item.component";
 import {LoginFormComponent} from "./layouts/components/login-form/login-form.component";
+import {ExtraProductComponent} from "./components/extra-product/extra-product.component";
+import {ExtraDessertDrinkComponent} from "./components/extra-dessert-drink/extra-dessert-drink.component";
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import {LoginFormComponent} from "./layouts/components/login-form/login-form.com
     MenuListComponent,
     TitleComponent,
     ProductComponent,
+    ExtraProductComponent,
+    ExtraDessertDrinkComponent,
     ButtonComponent,
     MenuItemComponent,
     LoginFormComponent,
@@ -40,6 +44,8 @@ import {LoginFormComponent} from "./layouts/components/login-form/login-form.com
     MenuListComponent,
     TitleComponent,
     ProductComponent,
+    ExtraProductComponent,
+    ExtraDessertDrinkComponent,
     ButtonComponent,
     MenuItemComponent,
     LoginFormComponent,

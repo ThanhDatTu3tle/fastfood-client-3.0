@@ -1,0 +1,90 @@
+hr {
+  display: block;
+  margin-end: auto;
+  margin-start: auto;
+  border: 1px inset;
+  overflow: hidden;
+  margin-before: 0.5em;
+  margin-after: 0.5em;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 600;
+  color: #ff5b6a;
+  margin-bottom: 20px;
+}
+
+.descriptions {
+  width: 100%;
+  height: fit-content;
+  padding-top: 20px;
+  border-top: 1px dashed #c4c4c4;
+  font-size: 16px;
+}
+
+.extra {
+  width: 100%;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  margin-top: 20px;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.minus {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF969A;
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.counter {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  background-color: #FFEAE3;
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF969A;
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+}

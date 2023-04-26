@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Product } from "../../../../../models/product.model";
-import { Category } from '../../../../../models/category.model';
 
 const apiUrl = 'https://odd-jade-adder-vest.cyclic.app/product';
 @Injectable({

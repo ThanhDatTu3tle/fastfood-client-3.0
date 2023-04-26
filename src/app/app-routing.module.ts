@@ -15,6 +15,18 @@ const routes: Routes = [
     path: "category/chicken",
     loadChildren: () => import('./pages/chicken/chicken.module').then(m => m.ChickenModule)
   },
+  {
+    path: "product/:id",
+    loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule)
+  },
+  {
+    path: "category/promotion/product/:id",
+    loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule)
+  },
+  {
+    path: "category/chicken/product/:id",
+    loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule)
+  }
 ];
 
 @NgModule({

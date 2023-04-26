@@ -1,0 +1,58 @@
+img {
+  margin-left: 50px;
+  width: 90px;
+  height: 70px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #c4c4c4;
+  justify-content: space-between;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.btn-cancel {
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.lotteria.vn/grs-static/images/icon-remove.svg");
+  border: none;
+  float: left;
+  padding: 0;
+  margin: 0 0 15px 5px;
+}
