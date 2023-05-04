@@ -1,0 +1,14 @@
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  width: 60%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -13px;
+}

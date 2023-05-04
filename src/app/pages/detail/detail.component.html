@@ -16,18 +16,22 @@
         </div>
       </div>
 
+<!--      <div class="extra">-->
+<!--          <app-extra-product *ngIf="check; else others" [products]="productSauceChickens" [content]="titleSauceChicken"></app-extra-product>-->
+<!--      </div>-->
+
       <div class="extra">
-        <app-extra-product [products]="productSauceChickens" [content]="titleSauceChicken"></app-extra-product>
+        <app-extra-product *ngIf="checkBG; else othersBG" [products]="productBurgerExtra" [content]="titleBurger"></app-extra-product>
       </div>
 
       <div class="extra">
-        <app-extra-dessert-drink [productDesserts]="productDesserts" [content]="titleDessert"></app-extra-dessert-drink>
+        <app-extra-drink *ngIf="checkDD; else othersDD" [productDrinks]="productDrinks" [content]="titleDrink"></app-extra-drink>
       </div>
 
       <div class="quantity">
         <h2 style="margin-top: 10px;">Quantity</h2>
         <button class="minus">-</button>
-        <div class="counter">0</div>
+        <div class="counter">1</div>
         <button class="plus">+</button>
       </div>
 
@@ -35,3 +39,9 @@
     </div>
   </div>
 </div>
+
+<ng-template #othersBG>
+</ng-template>
+<ng-template #othersDD>
+  <app-extra-dessert-drink [productDesserts]="productDesserts" [content]="titleDessert"></app-extra-dessert-drink>
+</ng-template>

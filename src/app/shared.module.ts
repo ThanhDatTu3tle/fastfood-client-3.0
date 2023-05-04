@@ -17,7 +17,7 @@ import {MenuItemComponent} from "./layouts/components/menu-list/menu-item/menu-i
 import {LoginFormComponent} from "./layouts/components/login-form/login-form.component";
 import {ExtraProductComponent} from "./components/extra-product/extra-product.component";
 import {ExtraDessertDrinkComponent} from "./components/extra-dessert-drink/extra-dessert-drink.component";
-
+import {ExtraDrinkComponent} from "./components/extra-drink/extra-drink.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import {ExtraDessertDrinkComponent} from "./components/extra-dessert-drink/extra
     ProductComponent,
     ExtraProductComponent,
     ExtraDessertDrinkComponent,
+    ExtraDrinkComponent,
     ButtonComponent,
     MenuItemComponent,
     LoginFormComponent,
@@ -46,6 +47,7 @@ import {ExtraDessertDrinkComponent} from "./components/extra-dessert-drink/extra
     ProductComponent,
     ExtraProductComponent,
     ExtraDessertDrinkComponent,
+    ExtraDrinkComponent,
     ButtonComponent,
     MenuItemComponent,
     LoginFormComponent,

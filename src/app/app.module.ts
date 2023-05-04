@@ -30,7 +30,6 @@ import { OrderNowComponent } from './pages/home/menu-highlights/items/order-now/
 import { BirthdayComponent } from './pages/home/menu-highlights/items/birthday/birthday.component';
 import { StoreComponent } from './pages/home/menu-highlights/items/store/store.component';
 import { HighlightsComponent } from './pages/home/menu-highlights/items/highlights/highlights.component';
-import { DetailComponent } from "./pages/detail/detail.component";
 
 import { SharedModule } from "./shared.module";
 

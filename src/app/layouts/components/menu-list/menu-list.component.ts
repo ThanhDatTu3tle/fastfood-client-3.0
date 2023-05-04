@@ -20,7 +20,7 @@ export class MenuListComponent {
   bestsellerLink: string = "/category/bestseller";
   promotionLink: string = "/category/promotion";
   chickenLink: string = "/category/chicken";
-  chickensetLink: string = "/category/chickenset";
+  chickensetLink: string = "/category/chicken-set";
   burgerLink: string = "/category/burger";
   comboLink: string = "/category/combo";
   riceandspaghettiLink: string = "/category/riceandspaghetti";

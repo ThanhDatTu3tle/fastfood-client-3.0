@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center">
+  <div class="menu-list">
+    <app-menu-list></app-menu-list>
+  </div>
+
+  <div class="flex flex-col w-3/5 h-fit">
+    <!--    Title-->
+    <div>
+      <app-title [content]="title"></app-title>
+    </div>
+
+    <!--    Contents-->
+    <div class="flex flex-row items-center justify-between w-full h-fit">
+      <div class="products">
+        <app-product [products]="products"></app-product>
+      </div>
+    </div>
+  </div>
+</div>

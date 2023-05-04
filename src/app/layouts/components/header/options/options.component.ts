@@ -60,10 +60,6 @@ export class OptionsComponent implements OnInit {
     this.popperInstance.update();
   }
 
-  test(): void {
-    alert('Ngu');
-  }
-
   logout() {
     return this.google.signOut()
   }
