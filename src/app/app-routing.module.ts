@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./pages/home/home.component";
+import {InfoUserComponent} from "./pages/info-user/info-user.component";
 
 const routes: Routes = [
   {
     path: "",
     component: HomeComponent,
+  },
+  {
+    path: "account/info",
+    component: InfoUserComponent,
   },
   {
     path: "product/:id",

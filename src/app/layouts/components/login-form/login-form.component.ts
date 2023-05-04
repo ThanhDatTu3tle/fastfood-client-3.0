@@ -33,7 +33,8 @@ export class LoginFormComponent implements OnInit {
       Validators.compose([
         Validators.required,
         Validators.minLength(6),
-        Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/)
+        Validators.email,
+        Validators.pattern('^[0-9]{10}$')
       ])
     ]
   })

@@ -7,10 +7,10 @@
         <input class="input" placeholder="Enter your phone number/Email" formControlName="email" />
         <div *ngIf="form.email.invalid && (form.email.dirty || form.email.touched)">
           <div *ngIf="form.email.errors?.['required']">
-            <span class="text-red-600">Email is required.</span>
+            <span class="text-red-600">Email/phone number is required.</span>
           </div>
           <div *ngIf="form.email.errors?.['pattern']">
-            <span class="text-red-600">Email is invalid.</span>
+            <span class="text-red-600">Email/phone number is invalid.</span>
           </div>
         </div>
       </div>
@@ -34,10 +34,6 @@
 
         <button class="gg" (click)="handleSignInGoogle()">
           <span>GOOGLE</span>
-        </button>
-
-        <button class="ap">
-          <span>APPLE</span>
         </button>
       </div>
     </form>

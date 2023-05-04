@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { createPopper, Instance } from '@popperjs/core';
 
 import {GoogleApiService} from "../../../../google-api.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-options',
@@ -16,7 +17,8 @@ export class OptionsComponent implements OnInit {
   @ViewChild('button', { static: true }) button!: ElementRef
   @ViewChild('tooltip', { static: true }) tooltip!: ElementRef
   constructor(
-    private readonly google: GoogleApiService
+    private readonly google: GoogleApiService,
+    private readonly router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -58,6 +60,10 @@ export class OptionsComponent implements OnInit {
 
     // Update its position
     this.popperInstance.update();
+  }
+
+  handleRouteToInfoUser() {
+    this.router.navigate(['/account/info'])
   }
 
   logout() {
