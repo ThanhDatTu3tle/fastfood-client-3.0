@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -18,13 +18,20 @@ import {GoogleApiService} from "../../../google-api.service";
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss']
 })
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent implements AfterViewInit {
+  @ViewChild('inputRef') inputRef!: ElementRef;
 
+  captcha: string;
+  email: string;
   contentBtn: string = 'Continue';
+  checkoutAsGuest: boolean = true;
+  otpScreen: boolean = true;
   constructor(
     private fb: FormBuilder,
     private readonly google: GoogleApiService
   ) {
+    this.captcha = '';
+    this.email = 'Secret@email.com';
   }
 
   signInForm = this.fb.group({
@@ -48,6 +55,23 @@ export class LoginFormComponent implements OnInit {
 
   onSubmit() {
 
+  }
+
+  ngAfterViewInit() {
+    this.inputRef.nativeElement.blur();
+  }
+
+  resolved(captchaResponse: string) {
+    this.captcha = captchaResponse;
+    console.log('Resolved captcha with  response: ' + this.captcha);
+  }
+
+  handleCheckoutAsGuest() {
+   this.checkoutAsGuest = !this.checkoutAsGuest;
+  }
+
+  handleOptScreen() {
+    this.otpScreen = !this.otpScreen;
   }
 
   handleSignInGoogle() {

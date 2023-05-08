@@ -33,10 +33,45 @@ div::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0;
   margin-top: 20px;
   margin-left: 20px;
   width: 300px;
   height: 400px;
+}
+
+.form-otp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 400px;
+}
+
+.sign-in-form-otp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.otp-container {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+}
+
+.otp-input {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .image {
@@ -51,8 +86,14 @@ div::-webkit-scrollbar {
 .input {
   width: 247px;
   padding: 15px;
+  margin-top: -10px;
   border-radius: 5px;
   border: 1px solid #ff5b6a;
+}
+
+.recaptcha {
+  width: 100%;
+  margin-top: 10px;
 }
 
 .btn-continue {
@@ -70,6 +111,7 @@ div::-webkit-scrollbar {
 .checkout {
   margin-left: 60px;
   color: #ff5b6a;
+  cursor: pointer;
 }
 
 .login-others {

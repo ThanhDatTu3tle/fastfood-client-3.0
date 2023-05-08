@@ -18,6 +18,7 @@ import {LoginFormComponent} from "./layouts/components/login-form/login-form.com
 import {ExtraProductComponent} from "./components/extra-product/extra-product.component";
 import {ExtraDessertDrinkComponent} from "./components/extra-dessert-drink/extra-dessert-drink.component";
 import {ExtraDrinkComponent} from "./components/extra-drink/extra-drink.component";
+import {RecaptchaModule} from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -32,15 +33,16 @@ import {ExtraDrinkComponent} from "./components/extra-drink/extra-drink.componen
     LoginFormComponent,
     PopperComponent
   ],
-  imports: [
-    CommonModule,
-    RouterLink,
-    RouterLinkActive,
-    MatDialogModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatInputModule
-  ],
+    imports: [
+        CommonModule,
+        RouterLink,
+        RouterLinkActive,
+        MatDialogModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        RecaptchaModule
+    ],
   exports: [
     MenuListComponent,
     TitleComponent,

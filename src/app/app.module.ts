@@ -12,6 +12,9 @@ import { MatDialogModule } from "@angular/material/dialog";
 
 import { OAuthModule } from "angular-oauth2-oidc";
 
+import { RecaptchaModule, RecaptchaSettings, RECAPTCHA_SETTINGS } from 'ng-recaptcha';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -63,7 +66,8 @@ import { SharedModule } from "./shared.module";
     NgOptimizedImage,
     SharedModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    RecaptchaModule
   ],
   providers: [
     CategoryService,

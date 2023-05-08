@@ -1,10 +1,10 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="checkoutAsGuest; else checkout">
   <div class="form">
     <form [formGroup]="signInForm" class="sign-in-form" (ngSubmit)="onSubmit()">
       <h2>Đăng nhập hoặc tạo tài khoản</h2>
       <h3>Phone number/Email</h3>
       <div>
-        <input class="input" placeholder="Enter your phone number/Email" formControlName="email" />
+        <input #inputRef class="input" placeholder="Enter your phone number/Email" formControlName="email" />
         <div *ngIf="form.email.invalid && (form.email.dirty || form.email.touched)">
           <div *ngIf="form.email.errors?.['required']">
             <span class="text-red-600">Email/phone number is required.</span>
@@ -19,7 +19,9 @@
         <app-button class="btn" [content]="contentBtn"></app-button>
       </div>
 
-      <h3 class="checkout">Checkout as guest</h3>
+      <h3 class="checkout" (click)="handleCheckoutAsGuest()">
+        Checkout as guest
+      </h3>
 
       <div class="login-others">
         <p class="text">
@@ -43,3 +45,80 @@
     <img src="https://www.lotteria.vn/grs-static/images/login-banner.jpg"/>
   </div>
 </div>
+
+<ng-template #checkout>
+  <div class="wrapper" *ngIf="otpScreen; else otp">
+    <div class="form">
+      <form [formGroup]="signInForm" class="sign-in-form" (ngSubmit)="onSubmit()">
+        <h2>Checkout as guest</h2>
+        <h3>Tên người nhận hàng</h3>
+        <div>
+          <input class="input" placeholder="Tên người nhận hàng" formControlName="name" />
+          <div *ngIf="form.email.invalid && (form.email.dirty || form.email.touched)">
+            <div *ngIf="form.email.errors?.['required']">
+              <span class="text-red-600">Name is required.</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Phone number</h3>
+        <div>
+          <input class="input" placeholder="Enter your phone number" formControlName="email" />
+          <div *ngIf="form.email.invalid && (form.email.dirty || form.email.touched)">
+            <div *ngIf="form.email.errors?.['pattern']">
+              <span class="text-red-600">Phone number is invalid.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recaptcha">
+          <re-captcha (resolved)="resolved($event)" siteKey="6Led8u4lAAAAAN-k7bO9CRx79XTRBPsWbtGNMnzo"></re-captcha>
+        </div>
+
+        <div class="btn-continue">
+          <app-button class="btn" [content]="contentBtn" (click)="handleOptScreen()"></app-button>
+        </div>
+      </form>
+    </div>
+
+    <div class="image">
+      <img src="https://www.lotteria.vn/grs-static/images/login-banner.jpg"/>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #otp>
+  <div class="wrapper">
+    <div class="form-otp">
+      <form [formGroup]="signInForm" class="sign-in-form-otp" (ngSubmit)="onSubmit()">
+        <h2>Enter the identification code</h2>
+        <p>Your identification code has been sent to</p>
+        <p></p>
+        <p>Please enter your identification in the box.</p>
+
+        <div class="otp-container">
+          <input class="otp-input" type="text" maxlength="1" />
+          <input class="otp-input" type="text" maxlength="1" />
+          <input class="otp-input" type="text" maxlength="1" />
+          <input class="otp-input" type="text" maxlength="1" />
+          <input class="otp-input" type="text" maxlength="1" />
+          <input class="otp-input" type="text" maxlength="1" />
+        </div>
+
+
+        <p>Không nhận được mã? <span style="color: #ff5b6a; cursor: pointer">Gửi lại mã</span></p>
+        <div class="btn-continue">
+          <app-button class="btn" [content]="contentBtn" (click)="handleOptScreen()"></app-button>
+        </div>
+
+        <p>If you do not receive the OTP, please call</p>
+        <p><span style="color: #ff5b6a">1900 6778</span> for support.</p>
+        <h4>Thank you Tu3tleFF.</h4>
+      </form>
+    </div>
+
+    <div class="image">
+      <img src="https://www.lotteria.vn/grs-static/images/login-banner.jpg"/>
+    </div>
+  </div>
+</ng-template>
