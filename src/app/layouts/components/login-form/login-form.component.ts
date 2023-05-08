@@ -8,9 +8,10 @@ import {
   Validators
 } from "@angular/forms";
 
-import {NoWhitespaceValidator} from "../../../validators/no-whitespace.validator";
+// @ts-ignore
+import * as firebase from 'firebase/app';
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 
-import { Observable, of } from "rxjs";
 import {GoogleApiService} from "../../../google-api.service";
 
 @Component({
@@ -26,9 +27,13 @@ export class LoginFormComponent implements AfterViewInit {
   contentBtn: string = 'Continue';
   checkoutAsGuest: boolean = true;
   otpScreen: boolean = true;
+  otpCode!: string;
+  // @ts-ignore
+  confirmationResult: firebase.auth.ConfirmationResult;
   constructor(
     private fb: FormBuilder,
-    private readonly google: GoogleApiService
+    private readonly google: GoogleApiService,
+    private afAuth: AngularFireAuthModule
   ) {
     this.captcha = '';
     this.email = 'Secret@email.com';
@@ -72,6 +77,17 @@ export class LoginFormComponent implements AfterViewInit {
 
   handleOptScreen() {
     this.otpScreen = !this.otpScreen;
+    const phoneNumber = 'RECIPIENT_PHONE_NUMBER'; // Replace with the recipient's phone number
+
+    // @ts-ignore
+    this.afAuth.auth.signInWithPhoneNumber(phoneNumber)
+      .then((confirmationResult: any) => {
+        this.confirmationResult = confirmationResult;
+        console.log('OTP sent successfully.');
+      })
+      // .catch(error => {
+      //   console.error('Failed to send OTP:', error);
+      // });
   }
 
   handleSignInGoogle() {

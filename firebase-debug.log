@@ -1,0 +1,191 @@
+[debug] [2023-05-08T09:28:28.824Z] ----------------------------------------------------------------------
+[debug] [2023-05-08T09:28:28.826Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-08T09:28:28.826Z] CLI Version:   11.30.0
+[debug] [2023-05-08T09:28:28.826Z] Platform:      win32
+[debug] [2023-05-08T09:28:28.827Z] Node Version:  v18.14.2
+[debug] [2023-05-08T09:28:28.828Z] Time:          Mon May 08 2023 16:28:28 GMT+0700 (Indochina Time)
+[debug] [2023-05-08T09:28:28.829Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-08T09:28:28.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-08T09:28:28.971Z] > authorizing via signed-in user (thanhdat11badinh@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Admin\WebstormProjects\fastfood-client-3.0
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-08T09:28:34.051Z] Using project from CLI flag: tu3tleff
+[debug] [2023-05-08T09:28:34.053Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tu3tleff [none]
+[debug] [2023-05-08T09:28:37.676Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tu3tleff 200
+[debug] [2023-05-08T09:28:37.676Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tu3tleff {"projectId":"tu3tleff","projectNumber":"487883915512","displayName":"Tu3tleFF","name":"projects/tu3tleff","resources":{"hostingSite":"tu3tleff","realtimeDatabaseInstance":"tu3tleff-default-rtdb"},"state":"ACTIVE","etag":"1_3e406278-3707-4df9-83e0-c62556a6ac6d"}
+[info] i  Using project tu3tleff (Tu3tleFF) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-05-08T09:28:37.683Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-05-08T09:28:37.684Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:28:39.430Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firebasedatabase.googleapis.com 200
+[debug] [2023-05-08T09:28:39.430Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-05-08T09:28:39.432Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/tu3tleff/locations/-/instances/tu3tleff-default-rtdb [none]
+[debug] [2023-05-08T09:28:40.626Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/tu3tleff/locations/-/instances/tu3tleff-default-rtdb 200
+[debug] [2023-05-08T09:28:40.627Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/tu3tleff/locations/-/instances/tu3tleff-default-rtdb {"name":"projects/487883915512/locations/asia-southeast1/instances/tu3tleff-default-rtdb","project":"projects/487883915512","databaseUrl":"https://tu3tleff-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-05-08T09:28:48.481Z] >>> [apiv2][query] GET https://tu3tleff-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2023-05-08T09:28:52.046Z] <<< [apiv2][status] GET https://tu3tleff-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-05-08T09:28:52.046Z] <<< [apiv2][body] GET https://tu3tleff-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [stream]
+[info] +  Database Rules for tu3tleff-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2023-05-08T09:28:52.052Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firestore.googleapis.com [none]
+[debug] [2023-05-08T09:28:52.052Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firestore.googleapis.com x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:28:53.717Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firestore.googleapis.com 200
+[debug] [2023-05-08T09:28:53.718Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/firestore.googleapis.com [omitted]
+[debug] [2023-05-08T09:28:53.718Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default) [none]
+[debug] [2023-05-08T09:28:54.087Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default) 200
+[debug] [2023-05-08T09:28:54.088Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default) {"name":"projects/tu3tleff/databases/(default)","uid":"77ea9307-f5a4-4717-8690-3ab34b4c8374","createTime":"2023-05-08T09:27:56.010313Z","updateTime":"2023-05-08T09:27:56.010313Z","locationId":"asia-southeast1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","appEngineIntegrationMode":"DISABLED","keyPrefix":"zas","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IIfclKO05f4CMMmO8oe05f4C"}
+[debug] [2023-05-08T09:28:54.088Z] database_type: FIRESTORE_NATIVE
+[debug] [2023-05-08T09:28:54.088Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-08T09:28:54.088Z] > authorizing via signed-in user (thanhdat11badinh@gmail.com)
+[debug] [2023-05-08T09:28:54.089Z] [iam] checking project tu3tleff for permissions ["firebase.projects.get"]
+[debug] [2023-05-08T09:28:54.089Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions [none]
+[debug] [2023-05-08T09:28:54.090Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:28:54.090Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-08T09:28:58.391Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions 200
+[debug] [2023-05-08T09:28:58.391Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-05-08T09:29:00.553Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/tu3tleff/releases pageSize=10&pageToken=
+[debug] [2023-05-08T09:29:05.946Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/tu3tleff/releases 200
+[debug] [2023-05-08T09:29:05.946Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/tu3tleff/releases {"releases":[{"name":"projects/tu3tleff/releases/cloud.firestore","rulesetName":"projects/tu3tleff/rulesets/f252eaba-bf1b-4594-84d6-32cc0dbe0698","createTime":"2023-05-08T09:28:04.930796Z","updateTime":"2023-05-08T09:28:04.930796Z"}]}
+[debug] [2023-05-08T09:29:05.947Z] Found ruleset: projects/tu3tleff/rulesets/f252eaba-bf1b-4594-84d6-32cc0dbe0698
+[debug] [2023-05-08T09:29:05.947Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/tu3tleff/rulesets/f252eaba-bf1b-4594-84d6-32cc0dbe0698 [none]
+[debug] [2023-05-08T09:29:07.794Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/tu3tleff/rulesets/f252eaba-bf1b-4594-84d6-32cc0dbe0698 200
+[debug] [2023-05-08T09:29:07.794Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/tu3tleff/rulesets/f252eaba-bf1b-4594-84d6-32cc0dbe0698 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-05-08T09:29:09.452Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-05-08T09:29:09.454Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-05-08T09:29:09.967Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-05-08T09:29:09.967Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-05-08T09:29:10.308Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-05-08T09:29:10.308Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/tu3tleff/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/tu3tleff/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2023-05-08T09:29:10.311Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-08T09:29:10.312Z] > authorizing via signed-in user (thanhdat11badinh@gmail.com)
+[debug] [2023-05-08T09:29:10.312Z] [iam] checking project tu3tleff for permissions ["firebase.projects.get"]
+[debug] [2023-05-08T09:29:10.312Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions [none]
+[debug] [2023-05-08T09:29:10.312Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:29:10.312Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-08T09:29:11.570Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions 200
+[debug] [2023-05-08T09:29:11.570Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tu3tleff:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-08T09:29:11.571Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-05-08T09:29:11.571Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:29:11.572Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-05-08T09:29:11.572Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:29:13.306Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/runtimeconfig.googleapis.com 200
+[debug] [2023-05-08T09:29:13.306Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-05-08T09:29:17.220Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com 200
+[debug] [2023-05-08T09:29:17.220Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2023-05-08T09:29:17.220Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2023-05-08T09:29:17.221Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:29:19.156Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2023-05-08T09:29:19.156Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2023-05-08T09:29:29.169Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-05-08T09:29:29.170Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/tu3tleff
+[debug] [2023-05-08T09:29:30.866Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com 200
+[debug] [2023-05-08T09:29:30.866Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/tu3tleff/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-05-08T09:31:25.775Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-05-08T09:31:26.853Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-05-08T09:31:26.854Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.21.0","browserURL":"https://www.gstatic.com/firebasejs/9.21.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.21.0/firebase.tgz"},"live":{"version":"9.21","browserURL":"https://www.gstatic.com/firebasejs/live/9.21/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.21/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.21.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.21.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.21.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.21.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.21.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.21.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.21.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.21.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.21.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.21.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\Admin\WebstormProjects\fastfood-client-3.0 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=425184736&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-08T09:31:40.799Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-05-08T09:31:40.799Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-05-08T09:31:41.571Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-05-08T09:31:41.572Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-05-08T09:31:41.588Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-05-08T09:31:42.681Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-05-08T09:31:42.682Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ThanhDatTu3tle","id":71086168,"node_id":"MDQ6VXNlcjcxMDg2MTY4","avatar_url":"https://avatars.githubusercontent.com/u/71086168?v=4","gravatar_id":"","url":"https://api.github.com/users/ThanhDatTu3tle","html_url":"https://github.com/ThanhDatTu3tle","followers_url":"https://api.github.com/users/ThanhDatTu3tle/followers","following_url":"https://api.github.com/users/ThanhDatTu3tle/following{/other_user}","gists_url":"https://api.github.com/users/ThanhDatTu3tle/gists{/gist_id}","starred_url":"https://api.github.com/users/ThanhDatTu3tle/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ThanhDatTu3tle/subscriptions","organizations_url":"https://api.github.com/users/ThanhDatTu3tle/orgs","repos_url":"https://api.github.com/users/ThanhDatTu3tle/repos","events_url":"https://api.github.com/users/ThanhDatTu3tle/events{/privacy}","received_events_url":"https://api.github.com/users/ThanhDatTu3tle/received_events","type":"User","site_admin":false,"name":"DatNguyen","company":null,"blog":"","location":"Viet Nam","email":null,"hireable":null,"bio":"Hi I'm Tu3tle","twitter_username":null,"public_repos":83,"public_gists":0,"followers":4,"following":7,"created_at":"2020-09-10T14:54:06Z","updated_at":"2023-05-06T08:55:08Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":185945,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as ThanhDatTu3tle 
+[info] 
+[debug] [2023-05-08T09:31:57.236Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-05-08T09:31:58.215Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-05-08T09:31:58.215Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-05-08T09:32:21.621Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-05-08T09:32:22.364Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-05-08T09:32:22.364Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 

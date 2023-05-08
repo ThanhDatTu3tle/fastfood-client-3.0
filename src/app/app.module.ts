@@ -14,6 +14,9 @@ import { OAuthModule } from "angular-oauth2-oidc";
 
 import { RecaptchaModule, RecaptchaSettings, RECAPTCHA_SETTINGS } from 'ng-recaptcha';
 
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -67,7 +70,9 @@ import { SharedModule } from "./shared.module";
     SharedModule,
     FormsModule,
     MatDialogModule,
-    RecaptchaModule
+    RecaptchaModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [
     CategoryService,
