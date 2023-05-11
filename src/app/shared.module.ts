@@ -10,6 +10,7 @@ import {MatInputModule} from "@angular/material/input";
 import {TitleComponent} from "./components/title/title.component";
 import {ProductComponent} from "./components/product/product.component";
 import {ButtonComponent} from "./components/button/button.component";
+import {ButtonOutlineComponent} from "./components/button-outline/button-outline.component";
 import {PopperComponent} from "./components/popper/popper.component";
 
 import {MenuListComponent} from "./layouts/components/menu-list/menu-list.component";
@@ -29,6 +30,7 @@ import {RecaptchaModule} from "ng-recaptcha";
     ExtraDessertDrinkComponent,
     ExtraDrinkComponent,
     ButtonComponent,
+    ButtonOutlineComponent,
     MenuItemComponent,
     LoginFormComponent,
     PopperComponent
@@ -53,7 +55,8 @@ import {RecaptchaModule} from "ng-recaptcha";
     ButtonComponent,
     MenuItemComponent,
     LoginFormComponent,
-    PopperComponent
+    PopperComponent,
+    ButtonOutlineComponent
   ]
 })
 export class SharedModule { }

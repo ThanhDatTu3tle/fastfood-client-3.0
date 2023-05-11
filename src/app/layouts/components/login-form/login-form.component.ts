@@ -90,6 +90,18 @@ export class LoginFormComponent implements AfterViewInit {
       // });
   }
 
+  verifyOTP() {
+    const otp = this.otpCode;
+
+    this.confirmationResult.confirm(otp)
+      .then(() => {
+        console.log('OTP verification successful.');
+      })
+      // .catch(error => {
+      //   console.error('Failed to verify OTP:', error);
+      // });
+  }
+
   handleSignInGoogle() {
     this.google.signIn()
   }

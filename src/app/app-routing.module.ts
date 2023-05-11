@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { HomeComponent } from "./pages/home/home.component";
-import { InfoUserComponent } from "./pages/info-user/info-user.component";
+import { SocialComponent } from "./pages/info-user/pages/social/social.component";
+import { InfoComponent } from "./pages/info-user/pages/info/info.component";
 
 const routes: Routes = [
   {
@@ -10,7 +12,12 @@ const routes: Routes = [
   },
   {
     path: "account/info",
-    component: InfoUserComponent,
+    component: InfoComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "account/social",
+    component: SocialComponent,
   },
   {
     path: "product/:id",
@@ -55,7 +62,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

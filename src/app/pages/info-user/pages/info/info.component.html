@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <div class="main">
+    <div class="nav">
+      <div class="avatar">
+        <img />
+        <div class="f-name">
+          T
+        </div>
+        <div class="name">Thành</div>
+        <div class="score">
+          <span class="icon-score">0 Điểm</span>
+        </div>
+      </div>
+      <div class="user-options">
+        <app-nav-titles></app-nav-titles>
+      </div>
+    </div>
+    <div class="content">
+      <h2 class="head-title">ACCOUNT INFORMATION</h2>
+      <div class="main-content">
+        <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 20px">USER INFORMATION</h5>
+
+        <div class="form-group">
+          <label class="form-label">Fullname</label>
+          <div class="form-input">
+            <input class="form-control" type="text" placeholder="Your fullname"/>
+          </div>
+
+          <label class="form-label">Date of birth</label>
+          <div class="form-input">
+            <input class="form-control" type="text" placeholder="Date of birth"/>
+          </div>
+
+          <label class="form-label">Phone number</label>
+          <div class="form-input">
+            <input class="form-control" type="text" placeholder="Your phone number"/>
+          </div>
+
+          <label class="form-label">Email</label>
+          <div class="form-input">
+            <input class="form-control" type="text" placeholder="Your email"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 20px">CHANGE YOUR PASSWORD</h5>
+
+        <div class="form-group">
+          <label class="form-label">New password</label>
+          <div class="form-input">
+            <input class="form-control" type="text" placeholder="Enter your passwrod"/>
+          </div>
+
+          <label class="form-label">Re-enter your password</label>
+          <div class="form-input">
+            <input class="form-control" type="text" placeholder="Re-enter your password"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <app-button-outline [content]="contentBtnWithdraw"></app-button-outline>
+        <app-button [content]="contentBtnSave"></app-button>
+      </div>
+    </div>
+  </div>
+</div>

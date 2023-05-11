@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   user: string | null = localStorage.getItem('user');
 
   contentBtnLogin: string = "LOGIN";
-  contentBtnLogout: string = "LOGOUT";
   constructor(
     public dialog: MatDialog,
     private readonly google: GoogleApiService
@@ -22,6 +21,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.user != null) {
+      localStorage.setItem('isLogin', 'true');
+    }
   }
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
@@ -31,10 +33,6 @@ export class HeaderComponent implements OnInit {
       enterAnimationDuration,
       exitAnimationDuration,
     });
-  }
-
-  logout() {
-    return this.google.signOut()
   }
 }
 

@@ -1,0 +1,82 @@
+<div class="wrapper">
+  <div class="menu-item" [routerLink]="['/account/info']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-myaccount-white.svg"/>
+      Account information
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/account/social']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center  bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-socials.svg"/>
+      Tài khoản mạng xã hội
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/birthday']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-pos-white.svg"/>
+      Shipping Address
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/store']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-history-white.svg"/>
+      Order history
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/ordernow']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-coupon-2.svg"/>
+      My coupons
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/ordernow']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="	https://www.lotteria.vn/grs-static/images/icon-save-white.svg"/>
+      Menu / wishlist
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/ordernow']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-support.svg"/>
+      Ý kiến khách hàng
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" [routerLink]="['/ordernow']" routerLinkActive="active">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-support.svg"/>
+      Support
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+
+  <div class="menu-item" (click)="logout()">
+    <div class="hover-top"></div>
+    <div class="flex flex-row items-center content-center bg-transparent">
+      <img class="mr-5" src="https://www.lotteria.vn/grs-static/images/icon-logout-white.svg"/>
+      Sign out
+    </div>
+    <div class="hover-bottom"></div>
+  </div>
+</div>
